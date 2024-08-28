@@ -272,6 +272,7 @@ nav {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 20px;
+    margin-top: 10px;
     justify-content: space-evenly;
 }
 
