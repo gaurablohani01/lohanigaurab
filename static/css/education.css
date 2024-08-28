@@ -9,7 +9,7 @@
 }
 
 
-.education-part::after {
+.education-part::before {
     content: '';
     position: absolute;
     width: 6px;
