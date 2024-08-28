@@ -344,7 +344,7 @@ nav {
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:530px) {
     .main .main-info {
         padding: 5px;
     }
