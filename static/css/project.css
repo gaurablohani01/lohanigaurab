@@ -9,7 +9,7 @@
 }
 
 
-.project-part::after {
+.project-part::before {
     content: '';
     position: absolute;
     width: 6px;
