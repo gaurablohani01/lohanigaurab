@@ -333,7 +333,7 @@ nav {
     }
 
     .main .second-part .section .language-all .language {
-        grid-template-columns: auto;
+             grid-template-columns: auto auto auto;
     }
 
     .main .second-part .section {
@@ -347,6 +347,9 @@ nav {
 @media screen and (max-width:500px) {
     .main .main-info {
         padding: 5px;
+    }
+      .main .second-part .section .language-all .language {
+             grid-template-columns: auto auto ;
     }
 
    
