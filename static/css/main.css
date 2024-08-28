@@ -270,9 +270,9 @@ nav {
 
 .main .second-part .section .language-all .language {
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 20px;
-    justify-content: space-around;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+    justify-content: space-evenly;
 }
 
 .main .second-part .section .language-all .language .card {
