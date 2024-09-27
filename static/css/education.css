@@ -117,7 +117,9 @@
         padding-left: 70px;
         padding-right: 25px;
     }
-
+.education-part::before {
+  left: 8%;
+}
 
     .educationa::before {
         left: 60px;
