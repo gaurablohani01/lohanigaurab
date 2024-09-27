@@ -131,6 +131,10 @@
     .right::after {
         left: 15px;
     }
+    .project-part::before {
+
+  left: 5%;
+}
 
 
     .right {
