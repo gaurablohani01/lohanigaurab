@@ -1,8 +1,0 @@
-[submodule "samriddha-nepal"]
-    path = samriddha-nepal
-    url = https://github.com/gaurablohani01/samriddha-nepal.git
-
-[submodule "samriddhanepal"]
-    path = samriddhanepal
-    url = https://github.com/gaurablohani01/samriddhanepal.git
-
