@@ -29,6 +29,8 @@ This website includes:
 - Contact form and direct links to my social profiles
 
 ## Installation
+```bash
+hello
 
 Follow these steps to set up the website locally:
 
@@ -37,5 +39,4 @@ Follow these steps to set up the website locally:
    ```bash
    git clone https://github.com/yourusername/portfolio.git
 
-   ```bash
-    hehe
+ 
