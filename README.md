@@ -37,4 +37,5 @@ Follow these steps to set up the website locally:
    ```bash
    git clone https://github.com/yourusername/portfolio.git
 
-   ```bash hehe
+   ```bash
+    hehe
