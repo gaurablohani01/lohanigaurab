@@ -29,14 +29,12 @@ This website includes:
 - Contact form and direct links to my social profiles
 
 ## Installation
-```bash
-hello
 
 Follow these steps to set up the website locally:
 
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/yourusername/portfolio.git 
 
  
