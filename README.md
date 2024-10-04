@@ -17,9 +17,7 @@ This website includes:
 ## Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Flask, Django (Python)
-- **Database**: MongoDB, MySQL
-- **Hosting**: PythonAnywhere
+- **Hosting**: Cloudfare
 
 ## Features
 
