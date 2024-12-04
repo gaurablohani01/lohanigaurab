@@ -1,6 +1,6 @@
 # Gaurab Lohani - Portfolio Website
 
-Welcome to the GitHub repository for my personal portfolio website: [www.gaurablohani.info.np](https://www.gaurablohani.info.np). This site highlights my journey as a **Full Stack Developer** and showcases my projects, skills, and experience.
+Welcome to the GitHub repository for my personal portfolio website: [www.lohanigaurab.com.np](https://www.lohanigaurab.com.np). This site highlights my journey as a **Full Stack Developer** and showcases my projects, skills, and experience.
 
 ## Website Overview
 
