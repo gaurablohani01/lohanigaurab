@@ -1,25 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
     function updateTime() {
-        let date = new Date();
-        let hour = date.getHours();
-        let min = date.getMinutes()
-        let sec = date.getSeconds();
-        let month = date.getMonth();
-        let monthdate = date.getDate();
-        let year = date.getFullYear();
-        let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        let ampm = hour >= 12 ? 'PM' : 'AM';
-        hour = hour % 12;
-        if (hour == 0) {
-            document.querySelector('.date').innerHTML = `${months[month]} ${monthdate} || 12:${min}:${sec} ${ampm}`;
-        } else {
-            document.querySelector('.date').innerHTML = `${months[month]} ${monthdate} || ${hour}:${min}:${sec} ${ampm}`;
-        }
+        // Get current date and time in Asia/Kathmandu timezone
+        let options = { timeZone: 'Asia/Kathmandu', hour12: true };
+        let formatter = new Intl.DateTimeFormat('en-US', {
+            ...options,
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+        });
+        let parts = formatter.formatToParts(new Date());
+        let year = parts.find(part => part.type === 'year').value;
+        let month = parts.find(part => part.type === 'month').value;
+        let day = parts.find(part => part.type === 'day').value;
+        let hour = parts.find(part => part.type === 'hour').value;
+        let minute = parts.find(part => part.type === 'minute').value;
+        let second = parts.find(part => part.type === 'second').value;
+        let ampm = parts.find(part => part.type === 'dayPeriod').value;
 
-        let country = new Intl.DateTimeFormat().resolvedOptions().timeZone;
-        document.querySelector('.year').innerHTML = `${year} - ${country}`;
-        // document.querySelector('.cuurentyear').innerHTML = `${year}`;
-        document.querySelector('.currentyear2').innerHTML = `${year}`;
+        // Update the date and time display
+        document.querySelector('.date').innerHTML = `${month} ${day} || ${hour}:${minute}:${second} ${ampm}`;
+        document.querySelector('.year').innerHTML = `${year} - Asia/Kathmandu`;
     }
 
     updateTime();
