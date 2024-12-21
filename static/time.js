@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     function updateTime() {
+        // Get the current date and time in the Asia/Kathmandu timezone
         let date = new Date();
         let options = { 
             timeZone: 'Asia/Kathmandu', 
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let second = parts.find(part => part.type === 'second').value;
         let ampm = parts.find(part => part.type === 'dayPeriod').value;
 
+        // Update the date and time display
         document.querySelector('.date').innerHTML = `${month} ${day} || ${hour}:${minute}:${second} ${ampm}`;
         document.querySelector('.year').innerHTML = `${year} - Asia/Kathmandu`;
     }
