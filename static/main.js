@@ -12,6 +12,12 @@ class LoadingManager {
         this.progressBar = document.querySelector('.loading-progress-bar');
         this.loadingText = document.querySelector('.loading-text p');
         
+        // If no loading overlay exists, skip loading screen
+        if (!this.loadingOverlay) {
+            this.enableScrolling();
+            return;
+        }
+        
         this.resources = [];
         this.loadedResources = 0;
         this.progress = 0;
@@ -20,7 +26,7 @@ class LoadingManager {
         
         this.messages = [
             'Preparing your experience...',
-            'Loading educational content...',
+            'Loading portfolio content...',
             'Setting up animations...',
             'Almost ready...',
             'Welcome!'
@@ -144,9 +150,7 @@ class LoadingManager {
     }
     
     completeLoading() {
-        // Enable scrolling
-        document.documentElement.style.overflow = '';
-        document.body.style.overflow = '';
+        this.enableScrolling();
         
         // Add loaded class to body
         document.body.classList.add('loaded');
@@ -165,6 +169,12 @@ class LoadingManager {
                 this.triggerScrollAnimations();
             }, 800);
         }
+    }
+    
+    enableScrolling() {
+        // Enable scrolling
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
     }
     
     triggerScrollAnimations() {
@@ -319,7 +329,7 @@ function initSmoothScrolling() {
 // TYPING ANIMATION
 // ==============================
 function initTypingAnimation() {
-    const typingElement = document.querySelector('.typing-animation');
+    const typingElement = document.querySelector('.typing-text');
     if (typingElement) {
         const text = typingElement.textContent;
         typingElement.textContent = '';
@@ -334,8 +344,8 @@ function initTypingAnimation() {
             }
         };
         
-        // Start typing animation after a short delay
-        setTimeout(typeWriter, 500);
+        // Start typing animation after loading is complete
+        setTimeout(typeWriter, 1000);
     }
 }
 
