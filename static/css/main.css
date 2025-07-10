@@ -1607,6 +1607,9 @@ input:focus, textarea:focus, select:focus {
         gap: 1.5rem;
     }
     
+    .scroll-indicator{
+        display: none;
+    }
     .choice-card {
         padding: 1.5rem;
     }
