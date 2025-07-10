@@ -2,21 +2,90 @@
 // LOADING SCREEN FUNCTIONALITY
 // ==============================
 
-// Enhanced error handling for loading manager
+// Network-aware loading manager
 class LoadingManager {
     constructor() {
+        // Store initial scroll position
+        this.initialScrollY = window.scrollY;
+        
+        // Prevent scrolling at the very beginning
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        document.body.style.height = '100vh';
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${this.initialScrollY}px`;
+        document.body.style.width = '100%';
+        
         this.loadingOverlay = document.getElementById('loadingOverlay');
         if (!this.loadingOverlay) {
             console.warn('Loading overlay not found');
-            document.body.classList.add('loaded');
+            this.resetBodyStyles();
             return;
         }
         
+        // Ensure the overlay is visible, fixed, and at the top
+        this.loadingOverlay.style.display = 'flex';
+        this.loadingOverlay.style.position = 'fixed';
+        this.loadingOverlay.style.top = '0';
+        this.loadingOverlay.style.left = '0';
+        this.loadingOverlay.style.right = '0';
+        this.loadingOverlay.style.bottom = '0';
+        this.loadingOverlay.style.zIndex = '999999';
+        window.scrollTo(0, 0);
+        
         this.loadingStartTime = Date.now();
-        this.minLoadingTime = 1500; // Minimum loading time in milliseconds
         this.resources = [];
         this.loadedResources = 0;
+        
+        // Network-aware loading times
+        this.checkNetworkSpeed();
+        
         this.init();
+    }
+    
+    // Check network connection and adjust loading time
+    checkNetworkSpeed() {
+        // Default values
+        this.minLoadingTime = 15000; // Default minimum loading time
+        
+        // Check if Network Information API is available
+        if ('connection' in navigator) {
+            const connection = navigator.connection;
+            
+            // Update loading text based on connection
+            const loadingText = document.querySelector('.loading-text p');
+            if (loadingText) {
+                if (connection.saveData) {
+                    loadingText.textContent = 'Loading in data-saver mode...';
+                } else {
+                    loadingText.textContent = 'Preparing your experience...';
+                }
+            }
+            
+            // Adjust loading time based on network type
+            if (connection.effectiveType) {
+                switch(connection.effectiveType) {
+                    case 'slow-2g':
+                    case '2g':
+                        this.minLoadingTime = 2500; // Longer loading time for slow connections
+                        console.log('Slow connection detected: Extending loading time');
+                        break;
+                    case '3g':
+                        this.minLoadingTime = 1800;
+                        break;
+                    case '4g':
+                        this.minLoadingTime = 1200; // Shorter time for fast connections
+                        break;
+                }
+            }
+            
+            // Listen for connection changes
+            if (connection.addEventListener) {
+                connection.addEventListener('change', () => {
+                    this.checkNetworkSpeed();
+                });
+            }
+        }
     }
 
     init() {
@@ -25,6 +94,7 @@ class LoadingManager {
             this.trackImages();
             this.trackFonts();
             this.trackStylesheets();
+            this.trackScripts();
             
             // Start loading process
             this.startLoading();
@@ -68,6 +138,18 @@ class LoadingManager {
             }
         });
     }
+    
+    trackScripts() {
+        const scripts = document.querySelectorAll('script[src]');
+        scripts.forEach(script => {
+            if (!script.hasAttribute('async') && !script.hasAttribute('defer')) {
+                this.resources.push(script);
+                // Scripts that are already executed won't trigger load events
+                // So we immediately count them as loaded
+                setTimeout(() => this.resourceLoaded(), 0);
+            }
+        });
+    }
 
     resourceLoaded() {
         this.loadedResources++;
@@ -82,7 +164,7 @@ class LoadingManager {
         const progressBar = document.querySelector('.loading-progress-bar');
         if (progressBar && this.resources.length > 0) {
             const progress = (this.loadedResources / this.resources.length) * 100;
-            progressBar.style.transform = `scaleX(${progress / 100})`;
+            progressBar.style.width = `${progress}%`;
         }
     }
 
@@ -104,17 +186,41 @@ class LoadingManager {
         }
     }
 
+    resetBodyStyles() {
+        // Reset all body style constraints
+        document.documentElement.style.overflow = '';
+        document.body.classList.add('loaded');
+        document.body.style.overflow = '';
+        document.body.style.height = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        
+        // Restore scroll position
+        if (this.initialScrollY) {
+            window.scrollTo(0, this.initialScrollY);
+        }
+    }
+    
     hideLoading() {
         if (this.loadingOverlay) {
-            this.loadingOverlay.classList.add('hidden');
-            document.body.classList.add('loaded');
+            // Add fade-out class for smooth transition
+            this.loadingOverlay.classList.add('fade-out');
+            
+            // Reset body styles and restore scroll position
+            this.resetBodyStyles();
             
             // Remove loading overlay after transition
             setTimeout(() => {
                 if (this.loadingOverlay && this.loadingOverlay.parentNode) {
-                    this.loadingOverlay.remove();
+                    this.loadingOverlay.style.display = 'none';
+                    this.loadingOverlay.style.zIndex = '-1'; // Move it behind content
                 }
             }, 500);
+            
+            // Log page load time for performance monitoring
+            const loadTime = Date.now() - this.loadingStartTime;
+            console.log(`Page loaded in ${loadTime}ms`);
         }
     }
 }
@@ -188,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'Full Stack Developer',
             'Python Developer', 
             'Web Developer',
-            'Django Expert',
+            'Django Developer',
             'Flask Developer'
         ];
         

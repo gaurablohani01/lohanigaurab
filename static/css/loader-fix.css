@@ -1,0 +1,106 @@
+/* Additional loader styles for proper positioning */
+.loading-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important; /* Fallback */
+  min-height: 100vh !important;
+  min-height: 100dvh !important; /* Dynamic viewport height for mobile browsers */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999999 !important; /* Extremely high z-index */
+  opacity: 1 !important;
+  transform: translateZ(0) !important; /* Force GPU acceleration */
+  background-color: var(--bg-color) !important;
+  overflow: hidden !important;
+  pointer-events: all !important; /* Make sure it blocks interactions */
+  transition: opacity 0.5s ease !important;
+}
+
+/* Hidden loading overlay */
+.loading-overlay.hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  z-index: -9999 !important;
+}
+
+/* Make sure body is locked while loading */
+body:not(.loaded) {
+  overflow: hidden !important;
+  touch-action: none !important;
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Ensure loading overlay works in iOS Safari */
+html.ios,
+html.ios body {
+  min-height: 100vh;
+  height: -webkit-fill-available;
+}
+
+/* Fix for loader on small height mobile devices */
+@media screen and (max-height: 500px) {
+  .loading-content {
+    transform: scale(0.85) translate(-55%, -55%);
+  }
+  
+  .loading-text h3 {
+    font-size: 1.2rem;
+  }
+  
+  .loading-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Better progress bar visibility */
+.loading-progress-bar {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.7), rgba(29, 78, 216, 1));
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+  border-radius: 10px;
+}
+
+/* Add better focus visibility for accessibility */
+a:focus, button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Make sure dark/light mode transition is smooth */
+body, body.loaded {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure all clickable elements have proper hover state */
+a, button, .nav-link, .btn {
+  transition: all 0.2s ease;
+}
+
+/* Fix nav focus for accessibility */
+.nav-link:focus {
+  box-shadow: none;
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Make sure footer stays at bottom on short pages */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
