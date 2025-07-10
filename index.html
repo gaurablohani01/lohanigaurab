@@ -1,244 +1,494 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaurab Lohani</title>
+    <title>Gaurab Lohani - Full Stack Developer | Portfolio</title>
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <meta name="description"
-        content="Gaurab Lohani: Exceptional Full Stack Developer with Expertise in Front-End and Back-End Development">
+        content="Gaurab Lohani - Experienced Full Stack Developer specializing in Python, Django, Flask, and modern web technologies. View my portfolio and projects.">
     <meta name="author" content="Gaurab Lohani">
     <meta name="keywords"
-        content="gaurablohani, gaurab lohani , gaurab, lohani, gaurav, gaurab, gauravlohani, gaurav lohani">
+        content="Gaurab Lohani, Full Stack Developer, Python Developer, Django, Flask, Web Development, Portfolio">
+    <meta property="og:title" content="Gaurab Lohani - Full Stack Developer | Portfolio">
+    <meta property="og:description" content="Experienced Full Stack Developer specializing in Python, Django, Flask, and modern web technologies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lohanigaurab.com.np">
+    <meta property="og:image" content="/static/img/profile1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gaurab Lohani - Full Stack Developer">
+    <meta name="twitter:description" content="Experienced Full Stack Developer specializing in Python, Django, Flask, and modern web technologies.">
+    <meta name="twitter:image" content="/static/img/profile1.jpg">
+    <link rel="canonical" href="https://lohanigaurab.com.np">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gaurab Lohani",
+        "jobTitle": "Full Stack Developer",
+        "description": "Experienced Full Stack Developer specializing in Python, Django, Flask, and modern web technologies",
+        "url": "https://lohanigaurab.com.np",
+        "image": "https://lohanigaurab.com.np/static/img/profile1.jpg",
+        "email": "info@lohanigaurab.com.np",
+        "telephone": "+977 9762748494",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Besishahar",
+            "addressRegion": "Lamjung",
+            "addressCountry": "Nepal"
+        },
+        "sameAs": [
+            "https://github.com/gaurablohani01",
+            "https://www.linkedin.com/in/gaurab-lohani-683329312/",
+            "https://x.com/lohani_gaurab",
+            "https://www.facebook.com/gaurablohani.py",
+            "https://www.instagram.com/gaurablohani.py/"
+        ],
+        "knowsAbout": [
+            "Python",
+            "Django",
+            "Flask",
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "Web Development",
+            "Full Stack Development"
+        ]
+    }
+    </script>
+    
+    <!-- Security Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body>
-    <div class="container" style="overflow: hidden;">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-  <a class="navbar-brand" href="#">
-            <img src="/static/img/logo.png" alt="Gaurab" style="height: 49px;"> </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-
-                            <a class="nav-link active" aria-current="page" href="/"> <i class="bi bi-house"></i>
-                                Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/education.html"><i class="bi bi-backpack4-fill"></i> Education</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/project.html"><i class="bi bi-projector"></i> Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact.html"><i class="bi bi-person-rolodex"></i> Contact</a>
-                        </li>                    
-                    </ul>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <div class="custom-logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6"/>
+                                <stop offset="100%" style="stop-color:#1d4ed8"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="20" cy="20" r="20" fill="url(#logoGradient)"/>
+                        <text x="20" y="28" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="14">GL</text>
+                    </svg>
                 </div>
-            </div>
-        </nav>
-        <div class="main">
-            <div class="main-info">
-                <div class="info">
-                    <div class="info-img">
-                        <img src="/static/img/profile1.jpg" alt="" style="height: 138px;">
-                    </div>
-                    <div class="into-details">
-                        <h1>Gaurab Lohani</h1>
-                        <p>Full Stack Developer</p>
-                        <div class="intro-networks">
-                            <ul>
-                                <div class="cards">
-                                    <a href="https://www.facebook.com/gaurablohani.py" target="_blank"><i class="bi bi-facebook"></i></a>
-                                </div>
-                                <div class="cards">
-                                    <a href="https://www.instagram.com/gaurablohani.py/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                </div>
-                                  <div class="cards">
-                                    <a href="https://github.com/gaurablohani01" target="_blank"><i class="bi bi-github"></i></a>
-                                </div>
-                                <div class="cards">
-                                    <a href="https://www.linkedin.com/in/gaurab-lohani-683329312/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                </div>
-                                <div class="cards">
-                                    <a href="https://x.com/lohani_gaurab" target="_blank"><i class="bi bi-twitter-x"></i></a>
-                                </div>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="intro-contact">
-                        <div class="contact">
-                            <div class="contact-network">
-                                <i class="bi bi-telephone-fill" style="color: #ed6c07;"></i>
-                                <div class="contact-details">
-                                    <p>Phone</p>
-                                    <h6>+977 9762748494</h6>
-                                </div>
-                            </div>
-                            <div class="contact-network">
-                                <i class="bi bi-envelope-fill" style="color: #ed6c07;"></i>
-                                <div class="contact-details">
-                                    <p>Email</p>
-                                    <h6>info@lohanigaurab.com.np</h6>
-                                </div>
-                            </div>
-                            <div class="contact-network">
-                                <i class="bi bi-geo-alt-fill" style="color: #ed6c07;"></i>
-                                <div class="contact-details">
-                                    <p>Location</p>
-                                    <h6>Besishahar-1, Lamjung</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <button>
-                            <a href="#" target="_blank" download="gaurab_cv.pdf">
-                                <div><span><i class="bi bi-download"></i></span>Download Resume</div>
-                            </a>
+                <span class="brand-text">Gaurab Lohani</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/project.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/education.html">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="bi bi-sun-fill"></i>
                         </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="hero-content">
+                        <div class="hero-greeting">
+                            <span class="greeting-text">Hello, I'm</span>
+                        </div>
+                        <h1 class="hero-name">
+                            <span class="text-gradient">Gaurab Lohani</span>
+                        </h1>
+                        <h2 class="hero-title">
+                            <span class="typing-text">Full Stack Developer</span>
+                        </h2>
+                        <p class="hero-description">
+                            I create innovative web applications using modern technologies like Python, Django, 
+                            Flask, and JavaScript. Passionate about turning ideas into digital reality.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="/contact.html" class="btn btn-primary">
+                                <i class="bi bi-envelope"></i>
+                                Get In Touch
+                            </a>
+                            <a href="/static/documents/gaurab_cv.pdf" target="_blank" class="btn btn-outline-primary" download="Gaurab_Lohani_CV.pdf">
+                                <i class="bi bi-download"></i>
+                                Download CV 
+                            </a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/gaurablohani01" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/gaurab-lohani-683329312/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://x.com/lohani_gaurab" target="_blank" rel="noopener noreferrer" title="Twitter/X">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/gaurablohani.py" target="_blank" rel="noopener noreferrer" title="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/gaurablohani.py/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <footer>
-                    Gaurab Lohani &copy; <span class="current-year"></span> All Rights Reserved
-                </footer>
-            </div>
-
-
-            <div class="second-part">
-
-                <div class="section">
-                    <div class="about">
-                        <div class="about-me">
-                            <div class="line">
-                                <h2>About Me </h2> <span class="span"> </span>
-                            </div>
-                            <p>I'm Gaurab, a dedicated and skilled full stack developer with expertise in HTML, CSS,
-                                JavaScript, Flask, Django and Python. I have a passion for crafting innovative web
-                                applications and strive to deliver high-quality solutions that meet client needs. On the
-                                front-end, I excel at creating visually appealing and interactive user interfaces using
-                                HTML, CSS, and JavaScript. I have experience in responsive web design, ensuring that
-                                applications look and perform seamlessly across various devices and screen sizes.
-                                <br>
-                            </p>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <div class="hero-image">
+                        <div class="image-container">
+                            <img src="/static/img/profile1.jpg" alt="Gaurab Lohani Profile Picture" class="profile-img" loading="eager" fetchpriority="high">
+                            <div class="image-glow"></div>
                         </div>
-                        <div class="skills">
-                            <div class="line">
-                                <h2>Skills</h2> <span class="span"></span>
+                        <div class="floating-elements">
+                            <div class="floating-card card-1">
+                                <i class="bi bi-code-slash"></i>
+                                <span>Full Stack</span>
                             </div>
-                            <div class="cards">
-                                <div class="card w-100" style="background-color: #f2f7fc;">
-                                    <div class="card-body">
-                                        <div class='text'>
-                                            <i class="bi bi-code-slash" style="color: #e80505;font-size: 25px;"></i>
-                                            <h3 class="card-title">Web Development</h3>
-                                        </div>
-                                        <p class="card-text">I've been dedicated to developing my web development skills
-                                            since my school days. Over time, I've completed beginner courses in
-                                            essential web technologies such as HTML, CSS, JavaScript, Python, and
-                                            Django. This journey has equipped me with a solid foundation in web
-                                            development. </p>
-                                    </div>
-                                </div>
+                            <div class="floating-card card-2">
+                                <i class="bi bi-server"></i>
+                                <span>Backend</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="language-all">
-                        <div class="line">
-                            <h2>Languages & Tools</h2> <span class="span"></span>
-                        </div>
-                        <div class="language">
-                             <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                                    <img src="/static/img/c.png" alt="C">
-                                  
-                                </div>
+                            <div class="floating-card card-3">
+                                <i class="bi bi-palette"></i>
+                                <span>Frontend</span>
                             </div>
-                                 <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                                    <img src="/static/img/css.png" alt="CSS">
-                                </div>
-                            </div>
-                               <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                                    <img src="/static/img/django.png" alt="Django">
-                                </div>
-                            </div>
-                               <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                                    <img src="/static/img/unnamed.png" alt="Flask">
-                                </div>
-                            </div>
-                                 <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                                 <img src="https://camo.githubusercontent.com/ff5301ef7472dbdf522b776167a8af8c326299fe8175e53f6b052bbcc04533e3/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667" alt="Git" width="40" height="40" data-canonical-src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" style="max-width: 100%;">
-                                 
-                                </div>
-                            </div>
-                             <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                                    <img src="/static/img/html.jpg" alt="HTML">
-                                   
-                                </div>
-                            </div>
-                              <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                                    <img src="/static/img/js.jpg" alt="JavaScript">
-                                  
-                                </div>
-                            </div>
-                        <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" width="40" height="40" style="max-width: 100%;">
-                                
-                                </div>
-                            </div>
-                                <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" width="40" height="40" style="max-width: 100%;">
-                           
-                                </div>
-                            </div>
-                                   <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" width="40" height="40" style="max-width: 100%;">
-                                  
-                                </div>
-                            </div>
-                          
-                            <div class="card text-center mb-3" style="width: 8rem;">
-                                <div class="card-body">
-                                    <img src="/static/img/python.png" alt="Python">
-                                  
-                                </div>
-                            </div>
-                        
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="footer-small">
-            Gaurab Lohani &copy; <span class="current-yeara"></span> All Rights Reserved
-        </footer>
-    </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3>I'm a passionate Full Stack Developer</h3>
+                        <p>
+                            I'm Gaurab, a passionate full-stack developer with expertise in modern web technologies. 
+                            I specialize in creating dynamic, responsive web applications using Python, Django, Flask, 
+                            and JavaScript. My journey in web development started during my school days, and I've been 
+                            continuously expanding my skills ever since.
+                        </p>
+                        <p>
+                            I excel at building user-friendly interfaces and robust backend systems. Whether it's 
+                            developing RESTful APIs, creating interactive user experiences, or optimizing database 
+                            performance, I'm committed to delivering high-quality solutions that exceed expectations.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h4>3+</h4>
+                                <span>Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <h4>20+</h4>
+                                <span>Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <h4>100%</h4>
+                                <span>Client Satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email</h5>
+                                <p>info@lohanigaurab.com.np</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Phone</h5>
+                                <p>+977 9762748494</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Location</h5>
+                                <p>Besishahar-1, Lamjung, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <img src="/static/img/html.jpg" alt="HTML5" title="HTML5">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="/static/img/css.png" alt="CSS3" title="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="/static/img/js.jpg" alt="JavaScript" title="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                      
+                        <div class="tech-item">
+                            <i class="fab fa-bootstrap"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <img src="/static/img/python.png" alt="Python" title="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="/static/img/django.png" alt="Django" title="Django">
+                            <span>Django</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="/static/img/unnamed.png" alt="Flask" title="Flask">
+                            <span>Flask</span>
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" width="40" height="40">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" width="40" height="40">
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQLite</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <img src="https://camo.githubusercontent.com/ff5301ef7472dbdf522b776167a8af8c326299fe8175e53f6b052bbcc04533e3/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667" alt="Git" width="40" height="40">
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" width="40" height="40">
+                            <span>Linux</span>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section featured-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-code-slash"></i>
+                                <span>GREED Platform</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/gaurablohani01/GREED" target="_blank" title="View Code">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="#" title="Live Demo">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>GREED Learning Platform</h3>
+                            <p>An innovative educational platform built with Django and modern web technologies.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-people-fill"></i>
+                                <span>Ensue Social</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/gaurablohani01" target="_blank" title="View Code">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="https://ensue.pythonanywhere.com/" target="_blank" title="Live Demo">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Ensue Social Media</h3>
+                            <p>A complete social media platform with real-time features and user interactions.</p>
+                            <div class="project-tech">
+                                <span>Django</span>
+                                <span>Python</span>
+                                <span>SQLite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-play-circle-fill"></i>
+                                <span>Netflix Clone</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" title="View Code">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="/netflix-clone/index.html" target="_blank" title="Live Demo">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Netflix Clone</h3>
+                            <p>A pixel-perfect Netflix interface clone with responsive design and animations.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="/project.html" class="btn btn-outline-primary">
+                    View All Projects
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; <span class="current-year"></span> Gaurab Lohani. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/contact.html">Contact</a>
+                    <a href="/project.html">Projects</a>
+                    <a href="/education.html">Education</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="/static/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-  
 </body>
 </html>

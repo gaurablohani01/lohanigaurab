@@ -174,45 +174,62 @@ class LoadingManager {
     }
 }
 
+// Initialize loading manager when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    new LoadingManager();
+});
+
+// Fallback for immediate execution
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        new LoadingManager();
+    });
+} else {
+    new LoadingManager();
+}
+
 // ==============================
-// MAIN APPLICATION INITIALIZATION
+// SCROLL ANIMATIONS
 // ==============================
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize loading manager
-    new LoadingManager();
-    
-    // Initialize theme switching
-    initThemeToggle();
-    
-    // Initialize navbar
-    initNavbar();
-    
-    // Initialize scroll animations
-    initScrollAnimations();
-    
-    // Initialize smooth scrolling
-    initSmoothScrolling();
-    
-    // Initialize typing animation
-    initTypingAnimation();
-    
-    // Initialize back to top button
-    initBackToTop();
-    
-    // Initialize contact form
-    initContactForm();
-    
-    // Update footer year
-    updateFooterYear();
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                
+                // Add staggered animation for education items
+                if (entry.target.classList.contains('education-item')) {
+                    const delay = Array.from(entry.target.parentNode.children).indexOf(entry.target) * 200;
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, delay);
+                }
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements with animation classes
+    document.querySelectorAll('.fade-in-up, .education-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(el);
+    });
 });
 
 // ==============================
 // THEME SWITCHING FUNCTIONALITY
 // ==============================
-function initThemeToggle() {
+document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
-    if (!themeToggle) return;
-    
     const html = document.documentElement;
     const themeIcon = themeToggle.querySelector('i');
     
@@ -240,14 +257,13 @@ function initThemeToggle() {
             themeIcon.className = 'bi bi-moon-fill';
         }
     }
-}
+});
 
 // ==============================
 // NAVBAR FUNCTIONALITY
 // ==============================
-function initNavbar() {
+document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
     
     // Navbar scroll behavior
     window.addEventListener('scroll', function() {
@@ -257,49 +273,12 @@ function initNavbar() {
             navbar.classList.remove('scrolled');
         }
     });
-}
-
-// ==============================
-// SCROLL ANIMATIONS
-// ==============================
-function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                
-                // Add staggered animation for education items
-                if (entry.target.classList.contains('education-item')) {
-                    const delay = Array.from(entry.target.parentNode.children).indexOf(entry.target) * 200;
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, delay);
-                }
-                
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements with animation classes
-    document.querySelectorAll('.fade-in-up, .education-item, .fade-in, .slide-up, .slide-left, .slide-right').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(el);
-    });
-}
+});
 
 // ==============================
 // SMOOTH SCROLLING FUNCTIONALITY
 // ==============================
-function initSmoothScrolling() {
+document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -313,12 +292,36 @@ function initSmoothScrolling() {
             }
         });
     });
-}
+});
+
+// ==============================
+// ANIMATION ON SCROLL
+// ==============================
+document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements with fade-in animation
+    document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right').forEach(el => {
+        observer.observe(el);
+    });
+});
 
 // ==============================
 // TYPING ANIMATION
 // ==============================
-function initTypingAnimation() {
+document.addEventListener('DOMContentLoaded', function() {
     const typingElement = document.querySelector('.typing-animation');
     if (typingElement) {
         const text = typingElement.textContent;
@@ -337,12 +340,12 @@ function initTypingAnimation() {
         // Start typing animation after a short delay
         setTimeout(typeWriter, 500);
     }
-}
+});
 
 // ==============================
 // BACK TO TOP BUTTON
 // ==============================
-function initBackToTop() {
+document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.getElementById('backToTop');
     
     if (backToTopButton) {
@@ -361,12 +364,12 @@ function initBackToTop() {
             });
         });
     }
-}
+});
 
 // ==============================
 // CONTACT FORM FUNCTIONALITY
 // ==============================
-function initContactForm() {
+document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
@@ -397,7 +400,7 @@ function initContactForm() {
             }, 2000);
         });
     }
-}
+});
 
 // ==============================
 // NOTIFICATION SYSTEM
@@ -423,12 +426,12 @@ function showNotification(message, type = 'info') {
 // ==============================
 // FOOTER FUNCTIONALITY
 // ==============================
-function updateFooterYear() {
+document.addEventListener('DOMContentLoaded', function() {
     const currentYearElement = document.querySelector('.current-year');
     if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
     }
-}
+});
 
 // ==============================
 // SERVICE WORKER REGISTRATION

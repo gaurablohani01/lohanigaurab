@@ -1,243 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaurab Lohani</title>
+    <title>Gaurab Lohani - Projects | Full Stack Developer Portfolio</title>
     <link rel="stylesheet" href="/static/css/main.css">
-    <meta name="description"
-        content="Gaurab Lohani: Exceptional Full Stack Developer with Expertise in Front-End and Back-End Development">
-    <meta name="author" content="Gaurab Lohani">
-    <meta name="keywords"
-        content="gaurablohani, gaurab lohani , gaurab, lohani, gaurav, gaurab, gauravlohani, gaurav lohani">
-    <link rel="stylesheet" href="/static/css/project.css">
     <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Explore Gaurab Lohani's portfolio of web development projects including social media platforms, e-commerce sites, and innovative web applications built with Python, Django, and modern technologies.">
+    <meta name="author" content="Gaurab Lohani">
+    <meta name="keywords"
+        content="Gaurab Lohani, Projects, Web Development, Python, Django, Flask, Portfolio, Full Stack Developer">
 </head>
 
 <body>
-    <div class="container" style="overflow: hidden;">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-           <a class="navbar-brand" href="#">
-            <img src="/static/img/logo.png" alt="Gaurab" style="height: 49px;"> </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-
-                            <a class="nav-link " href="/"> <i class="bi bi-house"></i>
-                                Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="/education.html"><i class="bi bi-backpack4-fill"></i>
-                                Education</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/project.html"><i
-                                    class="bi bi-projector"></i> Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact.html"><i class="bi bi-person-rolodex"></i> Contact</a>
-                        </li>
-                        
-                    </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <div class="custom-logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6"/>
+                                <stop offset="100%" style="stop-color:#1d4ed8"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="20" cy="20" r="20" fill="url(#logoGradient)"/>
+                        <text x="20" y="28" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="14">GL</text>
+                    </svg>
                 </div>
-            </div>
-        </nav>
-
-        <div class="main">
-            <div class="main-info">
-                <div class="info">
-                    <div class="info-img">
-                        <img src="/static/img/profile1.jpg" alt="" style="height: 138px;">
-                    </div>
-                    <div class="into-details">
-                        <h1>Gaurab Lohani</h1>
-                        <p>Full Stack Developer</p>
-                        <div class="intro-networks">
-                             <ul>
-                                <div class="cards">
-                                    <a href="https://www.facebook.com/gaurablohani.py" target="_blank"><i class="bi bi-facebook"></i></a>
-                                </div>
-                                <div class="cards">
-                                    <a href="https://www.instagram.com/gaurablohani.py/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                </div>
-                                  <div class="cards">
-                                    <a href="https://github.com/gaurablohani01" target="_blank"><i class="bi bi-github"></i></a>
-                                </div>
-                                <div class="cards">
-                                    <a href="https://www.linkedin.com/in/gaurab-lohani-683329312/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                </div>
-                                <div class="cards">
-                                    <a href="https://x.com/lohani_gaurab" target="_blank"><i class="bi bi-twitter-x"></i></a>
-                                </div>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="intro-contact">
-                        <div class="contact">
-                            <div class="contact-network">
-                                <i class="bi bi-telephone-fill" style="color: #ed6c07;"></i>
-                                <div class="contact-details">
-                                    <p>Phone</p>
-                                    <h6>+977 9762748494</h6>
-                                </div>
-                            </div>
-                            <div class="contact-network">
-                                <i class="bi bi-envelope-fill" style="color: #ed6c07;"></i>
-                                <div class="contact-details">
-                                    <p>Email</p>
-                                    <h6>info@lohanigaurab.com.np</h6>
-                                </div>
-                            </div>
-                            <div class="contact-network">
-                                <i class="bi bi-geo-alt-fill" style="color: #ed6c07;"></i>
-                                <div class="contact-details">
-                                    <p>Location</p>
-                                    <h6>Besishahar-1, Lamjung</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <button>
-                            <a href="#" target="_blank" download="gaurab_cv.pdf">
-                                <div><span><i class="bi bi-download"></i></span>Download Resume</div>
-                            </a>
+                <span class="brand-text">Gaurab Lohani</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/project.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/education.html">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="bi bi-sun-fill"></i>
                         </button>
-
-                    </div>
-                </div>
-                <footer>
-                    Gaurab Lohani &copy; <span class="current-year"></span> All Rights Reserved
-                </footer>
-            </div>
-
-
-            <div class="second-part">
-
-                <section id="project">
-                    <div class="project">
-                        <div class="line">
-                            <h2>Project </h2> <span class="span"></span>
-                        </div>
-                    </div>
-                    <div class="project-part">
-                        <div class="projecta left">
-                            <div class="content">
-                                <h2>2023</h2>
-                                <strong>Binayak Lohani Website</strong>
-                                <br>A Mechanical Enginner,<br>
-                                <p><a href="https://www.binayaklohani.com.np/" target="_blank">Click Here to visit
-                                        website:</a>
-
-                                </p>
-                            </div>
-                        </div>
-                        <div class="projecta right">
-                            <div class="content">
-                                <h2>2023</h2>
-                                <strong>Madhav Panta Website</strong>
-                                <br>An Auditor in Microfinance,<br>
-                                <p><a href="https://www.madhavpanta.com.np/" target="_blank">Click Here to visit
-                                        website:</a>
-
-                                </p>
-                            </div>
-                        </div>
-                        <div class="projecta left">
-                            <div class="content">
-                                <h2>2023</h2>
-                                <strong>Ensue Social Media Website</strong>
-                                <br>A Complete Social Media By Gaurab With Django framework,<br>
-                                <p><a href="https://ensue.pythonanywhere.com/" target="_blank">Click Here to visit
-                                        social media:</a>
-
-                                </p>
-                            </div>
-                        </div>
-                        <div class="projecta right">
-                            <div class="content">
-                                <h2>2024</h2>
-                                <strong>Netflix Clone</strong>
-                                <br>A complete Netflix clone,<br>
-                                <p><a href="/netflix-clone/index.html" target="_blank">Click Here to visit Netflix
-                                        Clone:</a>
-
-                                </p>
-                            </div>
-                        </div>
-                     
-                        <div class="projecta left">
-                            <div class="content">
-                                <h2>2024</h2>
-                                <strong>Rock,Paper Scissor Game</strong>
-                                <br>A Complete and simple Game By Gaurab ,<br>
-                                <p><a href="/game.html" target="_blank">Click Here to visit:</a>
-
-                                </p>
-                            </div>
-                        </div>
-
-                             <div class="projecta right">
-                            <div class="content">
-                                <h2>2025</h2>
-                                <strong>GREED Project</strong>
-                                <br>A platform for anyone to learn,<br>
-                                <p><a href="https://github.com/gaurablohani01/GREED" target="_blank">Click Here to visit:
-                                        </a>
-
-                                </p>
-                            </div>
-                        </div>
-                         <div class="projecta left">
-                            <div class="content">
-                                <h2>2025</h2>
-                                <strong>Kritak Pandey Website</strong>
-                                <br>An CS Student in Webstar University,<br>
-                                <p><a href="https://www.kritakpandey.com.np/" target="_blank">Click Here to visit
-                                        website:</a>
-
-                                </p>
-                            </div>
-                        </div>
-                             <div class="projecta right">
-                            <div class="content">
-                                <h2>2025</h2>
-                                <strong>                        Bank of Gaurab – Mobile Banking System
-</strong>
-                                <br>Simple bank transcation based project,<br>
-                                <p><a href="https://github.com/gaurablohani01/python_mobile_banking/" target="_blank">Click Here to visit:
-                                        </a>
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
+                    </li>
+                </ul>
             </div>
         </div>
-        <footer class="footer-small">
-            Gaurab Lohani &copy; <span class="current-yeara"></span> All Rights Reserved
-        </footer>
-    </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section projects-hero" style="min-height: 60vh; display: flex; align-items: center;">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="hero-name">My <span class="text-gradient">Projects</span></h1>
+                <p class="hero-description" style="max-width: 700px; margin: 1.5rem auto 0;">Explore my portfolio of web development projects, from social media platforms to interactive applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="featured-projects section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-code-slash"></i>
+                                <span>GREED Platform</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/gaurablohani01/GREED" target="_blank" title="View Code">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>GREED Learning Platform</h3>
+                            <p>An innovative educational platform designed to help anyone learn new skills. Built with modern web technologies and user-friendly interface.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-person-badge"></i>
+                                <span>Portfolio Site</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.kritakpandey.com.np/" target="_blank" title="Live Demo">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Kritak Pandey Portfolio</h3>
+                            <p>A professional portfolio website for a Computer Science student at Webstar University. Features modern design and responsive layout.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-bank"></i>
+                                <span>Mobile Banking</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/gaurablohani01/python_mobile_banking/" target="_blank" title="View Code">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Bank of Gaurab</h3>
+                            <p>A comprehensive mobile banking system simulation with transaction capabilities, account management, and secure authentication.</p>
+                            <div class="project-tech">
+                                <span>Python3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-play-circle-fill"></i>
+                                <span>Netflix Clone</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="/netflix-clone/index.html" target="_blank" title="Live Demo">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Netflix Clone</h3>
+                            <p>A pixel-perfect recreation of Netflix's interface with responsive design, interactive elements, and modern CSS animations.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-controller"></i>
+                                <span>RPS Game</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="/game.html" target="_blank" title="Play Game">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Rock Paper Scissors Game</h3>
+                            <p>An interactive web-based game with score tracking, smooth animations, and engaging user experience.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-people-fill"></i>
+                                <span>Ensue Social</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://ensue.pythonanywhere.com/" target="_blank" title="Live Demo">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Ensue Social Media</h3>
+                            <p>A complete social media platform built with Django framework, featuring user authentication, posts, comments, and real-time interactions.</p>
+                            <div class="project-tech">
+                                <span>Django</span>
+                                <span>Python</span>
+                                <span>SQLite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-person-workspace"></i>
+                                <span>Portfolio Site</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.binayaklohani.com.np/" target="_blank" title="Live Demo">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Binayak Lohani Portfolio</h3>
+                            <p>Professional portfolio website for a Mechanical Engineer showcasing projects, skills, and professional achievements.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-calculator"></i>
+                                <span>Auditor Site</span>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.madhavpanta.com.np/" target="_blank" title="Live Demo">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Madhav Panta Portfolio</h3>
+                            <p>Professional website for a microfinance auditor featuring services, qualifications, and contact information.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; <span class="current-year"></span> Gaurab Lohani. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/contact.html">Contact</a>
+                    <a href="/">Home</a>
+                    <a href="/education.html">Education</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="/static/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
 </body>
-
 </html>

@@ -1,0 +1,125 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Resources <<
+/Font <<
+/F1 4 0 R
+>>
+>>
+/Contents 5 0 R
+>>
+endobj
+
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+5 0 obj
+<<
+/Length 1000
+>>
+stream
+BT
+/F1 24 Tf
+50 750 Td
+(Gaurab Lohani) Tj
+0 -30 Td
+/F1 16 Tf
+(Full Stack Developer) Tj
+0 -40 Td
+/F1 12 Tf
+(Email: info@lohanigaurab.com.np) Tj
+0 -20 Td
+(Phone: +977 9762748494) Tj
+0 -20 Td
+(Location: Besishahar-1, Lamjung, Nepal) Tj
+0 -30 Td
+/F1 16 Tf
+(SKILLS) Tj
+0 -25 Td
+/F1 12 Tf
+(• Python, Django, Flask) Tj
+0 -15 Td
+(• JavaScript, HTML5, CSS3) Tj
+0 -15 Td
+(• Bootstrap, Responsive Design) Tj
+0 -15 Td
+(• Git, GitHub, Version Control) Tj
+0 -15 Td
+(• Database Management) Tj
+0 -30 Td
+/F1 16 Tf
+(EXPERIENCE) Tj
+0 -25 Td
+/F1 12 Tf
+(Full Stack Developer - 3+ Years) Tj
+0 -15 Td
+(• Developed 20+ web applications) Tj
+0 -15 Td
+(• Specialized in Python and Django) Tj
+0 -15 Td
+(• Created responsive user interfaces) Tj
+0 -15 Td
+(• Implemented RESTful APIs) Tj
+0 -30 Td
+/F1 16 Tf
+(EDUCATION) Tj
+0 -25 Td
+/F1 12 Tf
+(Computer Science & Technology) Tj
+0 -15 Td
+(Ongoing Studies) Tj
+0 -30 Td
+/F1 16 Tf
+(PROJECTS) Tj
+0 -25 Td
+/F1 12 Tf
+(• Portfolio Website) Tj
+0 -15 Td
+(• Netflix Clone) Tj
+0 -15 Td
+(• Rock Paper Scissors Game) Tj
+0 -15 Td
+(• Various Web Applications) Tj
+ET
+endstream
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000110 00000 n 
+0000000240 00000 n 
+0000000320 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1370
+%%EOF
