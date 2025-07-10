@@ -1,10 +1,8 @@
-
 // ==============================
 // MAIN APPLICATION INITIALIZATION
 // ==============================
+
 document.addEventListener('DOMContentLoaded', function() {
-]
-    
     // Initialize theme switching
     initThemeToggle();
     
