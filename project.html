@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-<head>
+<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaurab Lohani - Projects | Full Stack Developer Portfolio</title>
@@ -24,6 +25,36 @@
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <svg width="50" height="50" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="loadingLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3b82f6"/>
+                            <stop offset="100%" style="stop-color:#1d4ed8"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="20" cy="20" r="20" fill="url(#loadingLogoGradient)"/>
+                    <text x="20" y="28" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="14">GL</text>
+                </svg>
+            </div>
+            <div class="loading-text">
+                <h3>Loading Projects</h3>
+                <p>Showcasing my latest work</p>
+            </div>
+            <div class="loading-progress">
+                <div class="loading-progress-bar"></div>
+            </div>
+            <div class="loading-dots">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -103,8 +134,8 @@
                             <h3>GREED Learning Platform</h3>
                             <p>An innovative educational platform designed to help anyone learn new skills. Built with modern web technologies and user-friendly interface.</p>
                             <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
+                                <span>Python</span>
+                                <span>Django</span>
                                 <span>JavaScript</span>
                             </div>
                         </div>
@@ -157,7 +188,9 @@
                             <h3>Bank of Gaurab</h3>
                             <p>A comprehensive mobile banking system simulation with transaction capabilities, account management, and secure authentication.</p>
                             <div class="project-tech">
-                                <span>Python3</span>
+                                <span>Python</span>
+                                <span>SQLite</span>
+                                <span>Tkinter</span>
                             </div>
                         </div>
                     </div>
