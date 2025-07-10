@@ -3,8 +3,7 @@
 // MAIN APPLICATION INITIALIZATION
 // ==============================
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize loading manager
-    new LoadingManager();
+]
     
     // Initialize theme switching
     initThemeToggle();
