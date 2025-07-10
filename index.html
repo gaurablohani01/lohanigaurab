@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-<head>
+<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaurab Lohani - Full Stack Developer | Portfolio</title>
@@ -77,6 +78,37 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <svg width="50" height="50" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="loadingLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3b82f6"/>
+                            <stop offset="100%" style="stop-color:#1d4ed8"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="20" cy="20" r="20" fill="url(#loadingLogoGradient)"/>
+                    <text x="20" y="28" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="14">GL</text>
+                </svg>
+            </div>
+            <div class="loading-text">
+                <h3>Loading Portfolio</h3>
+                <p>Please wait while we prepare your experience</p>
+            </div>
+            <div class="loading-progress">
+                <div class="loading-progress-bar"></div>
+            </div>
+            <div class="loading-dots">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="/">
@@ -155,7 +187,7 @@
                             </a>
                             <a href="/static/documents/gaurab_cv.pdf" target="_blank" class="btn btn-outline-primary" download="Gaurab_Lohani_CV.pdf">
                                 <i class="bi bi-download"></i>
-                                Download CV 
+                                Download CV
                             </a>
                         </div>
                         <div class="social-links">
@@ -201,7 +233,11 @@
                 </div>
             </div>
         </div>
-       
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
