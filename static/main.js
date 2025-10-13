@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingElement = document.querySelector('.typing-text');
     if (typingElement) {
         const roles = [
-            'Full Stack Developer',
+            'Backend Developer',
             'Python Developer', 
             'Web Developer',
             'Django Developer',
