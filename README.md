@@ -1,6 +1,6 @@
 # Gaurab Lohani - Portfolio & Educational Platform
 
-A modern, responsive portfolio website and educational resource platform showcasing the work and skills of Gaurab Lohani, a Backend Developer specializing in Python, Django, Flask, and modern web technologies. Features an extensive BIM (Bachelor in Information Management) past questions library with copy protection and professional exam formatting.
+A modern, responsive portfolio website and educational resource platform showcasing the work and skills of Gaurab Lohani, a Backend Developer specializing in Python, Django, Flask, and modern web technologies. Features an extensive BITM (Bachelor in Information Technology and Management) past questions library with copy protection and professional exam formatting.
 
 Visit the live website: [www.lohanigaurab.com.np](https://www.lohanigaurab.com.np)
 
@@ -27,7 +27,7 @@ Visit the live website: [www.lohanigaurab.com.np](https://www.lohanigaurab.com.n
 - **📊 Timeline**: Interactive education timeline with status badges and floating icons
 - **💼 Project Showcase**: Hover effects, overlays, and live demo links with GitHub integration
 - **🏷️ Technology Badges**: Visual representation of skills with tech stack icons
-- **🔍 Search & Filter**: Dynamic search and semester filtering for BIM questions
+- **🔍 Search & Filter**: Dynamic search and semester filtering for BITM questions
 - **📚 Question Library**: 10 professionally formatted past question papers with SVG graphs
 
 ## 📄 Pages
@@ -35,11 +35,11 @@ Visit the live website: [www.lohanigaurab.com.np](https://www.lohanigaurab.com.n
 - **🏠 Home** (`index.html`): Hero section with typing animation, about me, skills showcase, and featured projects with social media integration
 - **🎓 Education & Certificates** (`education.html`): Interactive timeline of academic background, professional certificates with preview modals and verify links
 - **💼 Projects** (`project.html`): Complete portfolio showcase with live demos, GitHub links, and detailed project descriptions
-- **📚 BIM Questions** (`bim-questions.html`): Comprehensive past questions library for 1st & 2nd semester with search, filter, and PDF downloads
+- **📚 BITM Questions** (`bitm-questions.html`): Comprehensive past questions library for 1st & 2nd semester with search, filter, and PDF downloads
 - **📞 Contact** (`contact.html`): Contact information cards and working contact form with phone, email, and location details
 - **🎮 Game** (`game.html`): Interactive Rock Paper Scissors game with VS computer mode and score tracking
 
-### BIM Questions - Past Papers Collection
+### BITM Questions - Past Papers Collection
 - **📝 First Semester (5 subjects)**:
   - Basic Mathematics (MTH 103) - April-May 2025 - Full Marks: 100
   - C Programming (ITM 102) - April-May 2025 - Full Marks: 60
@@ -98,7 +98,7 @@ Visit the live website: [www.lohanigaurab.com.np](https://www.lohanigaurab.com.n
 - **Madhav Panta Portfolio**: Microfinance auditor business site - [madhavpanta.com.np](https://www.madhavpanta.com.np/)
 
 ### Educational Resources
-- **BIM Questions Library**: Complete collection of past questions for 10 subjects across 2 semesters with:
+- **BITM Questions Library**: Complete collection of past questions for 10 subjects across 2 semesters with:
   - Professional TU exam header format (3-column grid layout)
   - Copy protection with stylish custom modal alerts
   - SVG mathematical diagrams and graphs
@@ -204,13 +204,13 @@ lohanigaurab/
 ├── project.html              # Complete projects showcase
 ├── contact.html              # Contact form and information
 ├── game.html                 # Rock Paper Scissors game
-├── bim-questions.html        # BIM questions library landing page
+├── bitm-questions.html       # BITM questions library landing page
 ├── 404.html                  # Custom 404 error page
 ├── CNAME                     # Custom domain configuration
 ├── sitemap.xml              # SEO sitemap for search engines
 ├── README.md                # Project documentation
 │
-├── questions/               # BIM Past Questions Collection
+├── questions/               # BITM Past Questions Collection
 │   ├── basic-mathematics-1st-past-2025.html
 │   ├── c-programming-1st-past-2025.html
 │   ├── english-1st-past-2025.html
@@ -221,8 +221,8 @@ lohanigaurab/
 │   ├── java-oop-2nd-past-2023.html
 │   ├── discrete-structure-2nd-past-2023.html
 │   ├── ob-hrm-2nd-past-2023.html
-│   ├── BIM-1st-Sem-Model-Question-2022.pdf
-│   └── BIM-2nd-Semester-Model-Question.pdf
+│   ├── BITM-1st-Sem-Model-Question-2022.pdf
+│   └── BITM-2nd-Semester-Model-Question.pdf
 │
 ├── static/
 │   ├── css/
@@ -230,7 +230,7 @@ lohanigaurab/
 │   │   ├── contact.css       # Contact page specific styles
 │   │   ├── education.css     # Education timeline styles
 │   │   ├── project.css       # Project showcase styles
-│   │   ├── bim-questions.css # Question library styles
+│   │   ├── bitm-questions.css # Question library styles
 │   │   ├── question-page.css # Individual question page styles
 │   │   ├── responsive.css    # Responsive breakpoints
 │   │   └── loader-fix.css    # Loading screen styles
@@ -239,7 +239,7 @@ lohanigaurab/
 │   │   ├── main.js          # Main JavaScript functionality
 │   │   ├── game.js          # Rock Paper Scissors game logic
 │   │   ├── time.js          # Time utilities
-│   │   └── bim-questions.js # Search and filter logic
+│   │   └── bitm-questions.js # Search and filter logic
 │   │
 │   ├── img/                 # Images and assets
 │   │   ├── favicon.png      # Site favicon
@@ -327,7 +327,7 @@ lohanigaurab/
   - GitHub repository links
   - Live demo links (where applicable)
 
-### BIM Questions Platform
+### BITM Questions Platform
 - **Landing Page**:
   - Hero section with description
   - Search box with real-time filtering
@@ -476,7 +476,7 @@ This project is proprietary and confidential. Unauthorized copying, distribution
 - **Total Pages**: 16 (5 main pages + 10 question pages + 1 error page)
 - **Lines of Code**: ~15,000+ (HTML, CSS, JavaScript combined)
 - **Question Papers**: 10 complete past question papers
-- **Semesters Covered**: 2 (1st and 2nd semester BIM)
+- **Semesters Covered**: 2 (1st and 2nd semester BITM)
 - **Projects Showcased**: 6 featured projects
 - **Technology Icons**: 10+ tech stack icons
 - **Animations**: 50+ AOS animations, custom keyframe animations
@@ -488,7 +488,7 @@ This project is proprietary and confidential. Unauthorized copying, distribution
 ## 🛡️ Copy Protection Details
 
 ### Protected Content
-All 10 BIM past question pages are protected against unauthorized copying:
+All 10 BITM past question pages are protected against unauthorized copying:
 
 1. **Basic Mathematics (MTH 103)** - 22 questions, 4 groups
 2. **C Programming (ITM 102)** - 22 questions, programming focus
@@ -600,7 +600,7 @@ All question papers follow the official TU exam format:
 
 ## 👨‍💻 About the Developer
 
-**Gaurab Lohani** is a Backend Developer specializing in Python, Django, Flask, and modern web technologies. Currently pursuing Bachelor in Information Management (BIM) at Asian School of Management & Technology, Kathmandu, Nepal.
+**Gaurab Lohani** is a Backend Developer specializing in Python, Django, Flask, and modern web technologies. Currently pursuing Bachelor in Information Technology and Management (BITM) at Asian School of Management & Technology, Kathmandu, Nepal.
 
 ### Professional Focus
 - Backend development with Python frameworks (Django, Flask)
@@ -612,7 +612,7 @@ All question papers follow the official TU exam format:
 ### Current Project
 This portfolio and educational platform serves dual purposes:
 1. **Professional Portfolio**: Showcasing skills, projects, and experience
-2. **Educational Resource**: Free access to BIM past questions and study materials for fellow students
+2. **Educational Resource**: Free access to BITM past questions and study materials for fellow students
 
 ### Mission
 To create accessible, high-quality educational resources while demonstrating technical expertise through practical projects and real-world applications.
