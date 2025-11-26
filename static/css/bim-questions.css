@@ -1,0 +1,540 @@
+/* ==============================
+   BIM QUESTIONS PAGE STYLES
+============================== */
+
+.bim-hero {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.bim-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(147, 51, 234, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Search and Filter Section */
+.search-section {
+    background: var(--bg-secondary);
+}
+
+.search-filter-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-box input::placeholder {
+    color: var(--text-secondary);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--accent-gradient);
+    border-color: var(--accent-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Questions Section */
+.questions-section {
+    background: var(--bg-primary);
+}
+
+.semester-group {
+    margin-bottom: 4rem;
+}
+
+.semester-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.semester-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.semester-header h2 i {
+    color: var(--accent-primary);
+}
+
+.semester-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.questions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.question-card {
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.question-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+    transition: left 0.5s;
+}
+
+.question-card:hover::before {
+    left: 100%;
+}
+
+.question-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--accent-primary);
+    box-shadow: 0 20px 50px rgba(59, 130, 246, 0.25);
+}
+
+.question-card::after {
+    content: 'Click to view questions';
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    background: var(--accent-gradient);
+    color: white;
+    text-align: center;
+    padding: 0.75rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: bottom 0.3s ease;
+}
+
+.question-card:hover::after {
+    bottom: 0;
+}
+
+.question-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.subject-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.subject-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.subject-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.subject-code {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.question-details {
+    margin-bottom: 1.5rem;
+}
+
+.question-details p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.question-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.question-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+
+.question-meta span i {
+    color: var(--accent-primary);
+    font-size: 0.9rem;
+}
+
+.question-actions {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-model,
+.btn-preboard {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-model {
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.btn-model:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.btn-preboard {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.2);
+}
+
+.btn-preboard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.3);
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.no-results i {
+    font-size: 4rem;
+    color: var(--text-accent);
+    margin-bottom: 1.5rem;
+    opacity: 0.5;
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.no-results p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Statistics Section */
+.stats-section {
+    background: var(--bg-secondary);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+.stat-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.stat-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .questions-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .semester-header h2 {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .semester-header p {
+        font-size: 1rem;
+    }
+    
+    .question-card {
+        padding: 1.5rem;
+    }
+    
+    .subject-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .subject-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .subject-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .question-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .question-meta span {
+        justify-content: center;
+    }
+    
+    .question-actions {
+        flex-direction: column;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .stat-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .stat-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .stat-card h3 {
+        font-size: 2rem;
+    }
+    
+    .filter-buttons {
+        gap: 0.75rem;
+    }
+    
+    .filter-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box input {
+        padding: 0.875rem 0.875rem 0.875rem 3rem;
+        font-size: 0.9rem;
+    }
+    
+    .search-box i {
+        left: 1rem;
+        font-size: 1rem;
+    }
+    
+    .question-card {
+        padding: 1.25rem;
+    }
+    
+    .subject-info h3 {
+        font-size: 1rem;
+    }
+    
+    .question-details p {
+        font-size: 0.9rem;
+    }
+    
+    .btn-model,
+    .btn-preboard {
+        padding: 0.65rem 0.875rem;
+        font-size: 0.875rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation for cards appearing */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Light theme adjustments */
+[data-theme="light"] .question-card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .question-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .stat-card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .stat-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
